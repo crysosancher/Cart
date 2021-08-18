@@ -24,15 +24,23 @@ class CartItem extends React.Component {
 			return{
 				qty:prevState.qty+1
 			}
-		})
+		},()=>{
+			console.log("this.state increaseQuantity",this.state)
+		});
 	}
 	decreaseQuantity =()=>{
+		const{qty}=this.state;//destructing of array
+		if(qty==0){
+			return;
+		}
 		//setState form 2 :dependent on previous form
 		this.setState((prevState)=>{
 			return{
 				qty:prevState.qty-1
 			}
-		})
+		},()=>{//this portion will be called when the operation of setState will be done
+			console.log("this.state decreaseQuantity",this.state)
+		});
 	}
 	render() {//jsx
 		const { price, tittle, qty } = this.state;
@@ -66,6 +74,7 @@ const styles = {
 		height: 110,
 		width: 110,
 		borderRadius: 4,
+		background:'#ccc'
 
 	}
 }
