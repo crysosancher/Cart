@@ -5,7 +5,7 @@ import React from 'react';
 		return (
 			<div style={styles.nav}>
 				<div style={styles.cartIconContainer}>
-				<img style={styles.cartIcon}src="https://img-premium.flaticon.com/png/512/2838/premium/2838895.png?token=exp=1629460518~hmac=8df65340b45c5afa882cc02d5a634d7e" alt="cart Item"/>
+				<img style={styles.cartIcon}src="https://image.flaticon.com/icons/png/512/711/711897.png" alt="cart Item"/>
 				<span style={styles.cartCount}>{props.count}</span>
 
 				</div>
