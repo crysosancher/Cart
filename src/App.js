@@ -41,15 +41,19 @@ class App extends React.Component {
 		.orderBy('price','desc') 
 		 .onSnapshot((snapshot)=>{
 			console.log(snapshot,"Snap shot");
-		       snapshot.docs.map((doc )=>{
+		       const products=snapshot.docs.map((doc )=>{
 				console.log(doc.data())
-			});
-
-			const products=snapshot.docs.map((doc)=>{
 				const data=doc.data();
 				data['id']=doc.id;
 				return data;
-			})
+				
+			});
+
+			// const products=snapshot.docs.map((doc)=>{
+			// 	const data=doc.data();
+			// 	data['id']=doc.id;
+			// 	return data;
+			// })
 
 			this.setState({
 				products:products,
