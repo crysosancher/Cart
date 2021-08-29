@@ -177,10 +177,21 @@ addProduct=()=>{
 					//products={products}	
         />
 	{loading && <h1>Loading Products ....</h1>}
-        <div style={{padding:10,fontSize:20,position:'absolute',right:'0'}}>Total:{this.getCartTotal()}</div>
+        <div style={cartotal}>Total: ₹{this.getCartTotal()}</div>
       </div></div>
     );
   }
 }
-
+// eslint-disable-next-line no-unused-vars
+const cartotal={
+	padding: 15,
+	fontSize: 20,
+	position: 'absolute',
+	right: 9,
+	/* border: 2px solid; */
+	margin: 7,
+	fontStyle: 'italic',
+	color: 'gray',
+}
+//padding:15,fontSize:20,position:'absolute',right:0,marigin:7,fontStyle:'italic',color:'gray'
 export default App;
