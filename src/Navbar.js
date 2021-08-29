@@ -3,7 +3,7 @@ import React from 'react';
 	const Navbar=(props)=>{//jsx cahnged it to fucntion component
 
 		return (
-			<div style={styles.nav}>
+			<div style={styles.nav}><span>Sasta V-cart</span>
 				<div style={styles.cartIconContainer}>
 				<img style={styles.cartIcon}src="https://image.flaticon.com/icons/png/512/711/711897.png" alt="cart Item"/>
 				<span style={styles.cartCount}>{props.count}</span>
